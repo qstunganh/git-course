@@ -1,0 +1,4 @@
+a. Câu lệnh để cài đặt email: git config user.name "Tùng Anh"
+Câu lệnh để cài đặt name: git config user.email "qstunganh@gmail.com"
+
+b. Setup lại config user.name "PW - Tùng Anh"
