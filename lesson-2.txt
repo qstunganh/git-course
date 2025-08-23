@@ -1,0 +1,52 @@
+1: Giải thích câu lệnh
+a. git init
+   - Khởi tạo một repository Git mới trong thư mục hiện tại
+   - Tạo thư mục ẩn .git chứa tất cả metadata và lịch sử của repository
+   - Sau khi chạy lệnh này, thư mục sẽ trở thành một Git repository
+b. git add <file_name>
+   - Thêm một file cụ thể vào staging area (vùng chờ)
+   - File được đánh dấu để chuẩn bị cho commit tiếp theo
+   - Ví dụ: git add file1.txt sẽ thêm file1.txt vào staging area
+c. git add .
+   - Thêm TẤT CẢ các file đã thay đổi hoặc file mới trong thư mục hiện tại vào staging area
+   - Dấu chấm (.) đại diện cho thư mục hiện tại
+   - Tiện lợi khi muốn add nhiều file cùng lúc
+d. git commit -m "message"
+   - Tạo một commit (lần lưu) mới với tất cả các file trong staging area
+   - -m cho phép thêm commit message ngay trong câu lệnh
+   - Commit message nên mô tả ngắn gọn những thay đổi đã thực hiện
+
+Bài 2:
+Hãy tưởng tượng có 1 folder lesson-2 mới được tạo. Hãy liệt kê các file theo từng
+vùng sau khi thao tác một loạt các lệnh sau (sẽ rất tuyệt nếu bạn không chạy lệnh trên
+máy thật, mà bạn suy nghĩ trong đầu để ra được kết quả; bạn sẽ nhớ rất lâu đấy ^^):
+a. Tạo 3 file: file1, file2, file3
+local:file1, file2, file3
+working:
+staging:
+repository:
+b. Chạy lệnh: git init
+local:
+working:file1, file2, file3
+staging:
+repository:
+c. Chạy lệnh: git commit -m”init project”
+local:
+working:file1, file2, file3
+staging:
+repository:
+d. Chạy lệnh: git add file1
+local:
+working:file2, file3
+staging:file1
+repository:
+e. Chạy lệnh: git commit -m”add file1”
+local:
+working:file2, file3
+staging:
+repository:file1
+f. Chạy lệnh: git commit -m”add file”
+local:
+working:file2, file3
+staging:
+repository:file1
