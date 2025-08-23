@@ -1,0 +1,93 @@
+
+Bài 1: Giải thích câu lệnh
+a. git commit --amend: Sửa commit cuối cùng (message hoặc thêm file)
+b. git commit --amend -m"<message>": Sửa message của commit cuối cùng
+c. git restore --staged <file>: Bỏ file ra khỏi staging area (unstage)
+d. git reset HEAD~1: Hoàn tác commit cuối cùng nhưng giữ lại thay đổi
+
+
+Bài 2:
+Hãy tưởng tượng có 1 folder lesson-3 mới được tạo. Hãy liệt kê các file theo từng
+vùng, liệt kê các commit và message tương ứng sau khi thao tác một loạt các lệnh sau
+(sẽ rất tuyệt vời nếu bạn không chạy trên máy tính thật, mà bạn chạy trong đầu, sẽ giúp
+bạn hiểu về Git rõ ràng hơn):
+
+a. Tạo 3 file: file1, file2, file3
+local:file1, file2, file3
+working:
+staging:
+repository:
+
+b. Chạy lệnh: git init
+local:
+working:file1, file2, file3
+staging:
+repository:
+
+c. Chạy lệnh: git commit -m”init project”
+working:file1, file2, file3
+staging:
+repository:
+
+d. Chạy lệnh: git add file1
+working:file2, file3
+staging:file1
+repository:
+
+e. Chạy lệnh: git commit -m”add file1”
+working:file2, file3
+staging:
+repository:file1
+
+f. Chạy lệnh: git add .
+working:
+staging: file2, file3
+repository: file1
+
+g. Chạy lệnh: git restore --staged file2
+working: file2
+staging: file3
+repository: file1
+
+h. Chạy lệnh: git commit -m”add all files”
+working: file2
+staging: 
+repository: file1, file3
+
+h. Chạy lệnh: git reset HEAD~1
+working: file2, file3
+staging: 
+repository: file1
+
+
+Bài 3: Hãy tưởng tượng có 1 folder lesson-3-git mới được tạo ra. Hãy liệt kê các file theo
+từng vùng sau khi thao tác các lệnh sau:
+
+a. Chạy lệnh git init
+working: 
+staging: 
+repository: 
+
+b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+working: file1.txt, file2.txt, oops/file3.txt.
+staging: 
+repository: 
+
+c. Thêm file .gitignore, thêm vào 2 dòng:
+    i. file1.txt
+    ii. oops/
+working: file1.txt, file2.txt, oops/file3.txt, .gitignore
+staging: 
+repository: 
+
+d. Chạy lệnh: git add .
+working:
+staging: file2.txt, .gitignore
+repository:
+
+e. Chạy lệnh: git commit -m"init project"
+working:
+staging:
+repository: file2.txt, .gitignore
+
+
