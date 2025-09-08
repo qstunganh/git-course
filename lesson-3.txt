@@ -74,8 +74,8 @@ staging:
 repository: 
 
 c. Thêm file .gitignore, thêm vào 2 dòng:
-    i. file1.txt
-    ii. oops/
+    i. lesson-3/
+    ii. lesson-3/oops/
 working: file1.txt, file2.txt, oops/file3.txt, .gitignore
 staging: 
 repository: 
